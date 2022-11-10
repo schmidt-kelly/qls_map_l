@@ -11,7 +11,7 @@ class StipulationDate <  PgRecord
   has_many :financial_trans_histories, foreign_key: 'stip_key', class_name: "FinancialTransHistories"
   # has_many :qctrl_pmt_cc_alloc, foreign_key: 'stip_key', class_name: "QctrlPmtCcAlloc"
   # has_many :qctrl_pmt_sub_asgn, foreign_key: 'stip_key', class_name: "QctrlPmtSubAsgn"
-  has_many :qhist_events, foreign_key: 'stip_key', class_name: "QhistEvents"
+  # has_many :qhist_events, foreign_key: 'stip_key', class_name: "QhistEvents"
 
 
 end

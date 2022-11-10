@@ -19,6 +19,8 @@ class AllAgreements < PgRecord
   has_many :xreferenced_agmts_m, foreign_key: 'arrg_key', class_name: "XreferencedAgmtsM"
   has_many :arrg_st_cnty_rltn, foreign_key: 'arrg_key', class_name: "ArrgStCntyRltn"
   has_many :ra_arrg_rltn, foreign_key: 'ra_rltn_key', class_name: "RaArrgRltn"
+  has_many :well_agmt_xref_m, foreign_key: 'arrg_key', class_name: "WellAgmtXrefM"
+  has_many :well_info_qra, class_name: "WellInfoQra", :through => :well_agmt_xref_m
 
 
   belongs_to :property_statuses, foreign_key: 'arrg_prop_stat_code', class_name: "PropertyStatuses"

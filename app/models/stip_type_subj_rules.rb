@@ -5,4 +5,6 @@ class StipTypeSubjRules <  PgRecord
 
   belongs_to :stipulation_types, :foreign_key => [:stip_type_catg, :stip_type_code], class_name: "StipulationTypes"
   belongs_to :workspace_subject, foreign_key: 'subj_code', class_name: "WorkspaceSubject"
+
+  has_many :stip_group_subj_rules_rltn, :foreign_key => [:stip_type_catg, :stip_type_code, :subj_code], class_name: "StipGroupSubjRulesRltn"
 end
