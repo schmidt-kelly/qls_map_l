@@ -15,5 +15,6 @@ class WorkspaceSubject < PgRecord
   has_many :stipulation_units, foreign_key: 'subj_code', class_name: "StipulationUnits"
   has_many :stip_type_subj_rules, foreign_key: 'subj_code', class_name: "StipTypeSubjRules"
   has_many :stipulation_provisions, foreign_key: 'subj_code', class_name: "StipulationProvisions"
+  has_many :arrangement_stages, foreign_key: 'subj_code', class_name: "ArrangementStages"
 
 end

@@ -31,6 +31,7 @@ class AllAgreements < PgRecord
   belongs_to :land_classifications, foreign_key: 'land_cls_code', class_name: "LandClassifications"
   belongs_to :workspace_subject, foreign_key: 'subj_code', class_name: "WorkspaceSubject"
   belongs_to :arrangement_statuses, foreign_key: 'arrg_stat_code', class_name: "ArrangementStatuses"
+  belongs_to :arrangement_stages, :foreign_key => [:arrg_stge, :subj_code], class_name: "ArrangementStages"
   belongs_to :inactive_reasons, foreign_key: 'arrg_inac_rsn_code', class_name: "InactiveReasons"
   belongs_to :map_statuses, foreign_key: 'map_status', class_name: "MapStatuses"
 
